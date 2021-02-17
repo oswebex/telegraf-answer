@@ -1,6 +1,10 @@
 # Telegraf Answer
 Alpha версия 0.0.1
 
+```bash
+npm i https://github.com/ioscars/telegraf-answer
+```
+
 Примеры кода
 ```js
 const { Telegraf, Markup: m } = require('telegraf')
