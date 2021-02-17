@@ -10,13 +10,14 @@ npm i https://github.com/ioscars/telegraf-answer
 const { Telegraf, Markup: m } = require('telegraf')
 const { answerMiddle } = require('telegraf-answer')
 
+// Устанавливаем handlerTimeout, чтобы бот в режиме polling не зависал
 const bot = new Telegraf(process.env.BOT_TOKEN, { handlerTimeout: 100 })
 // Подключаем мидл
 bot.use(answerMiddle({ timeout: 30_000 }))
 bot.start(async ({ reply, answerTill, answer }) => {
   try {
     await reply('What is your name?')
-    // Спрашивает пока не пройдет проверку
+    // Будет спрашивать пока возвращается undefined, в функцию приходит message
     const name = await answerTill(async ({ text = '' }) => {
       if (text.length < 4)
         return void await reply('Your name is too short')
@@ -36,4 +37,7 @@ bot.start(async ({ reply, answerTill, answer }) => {
     return reply('Registration is failed.')
   }
 })
+
+bot.lauch()
+  .then(() => console.log('The bot is working'))
 ```
