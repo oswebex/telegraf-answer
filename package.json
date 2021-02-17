@@ -1,0 +1,35 @@
+{
+  "name": "telegraf-answer",
+  "version": "0.0.1",
+  "description": "Telegraf Answer",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioscars/telegraf-answer.git"
+  },
+  "keywords": [
+    "telegraf",
+    "ask",
+    "answer",
+    "answerTill"
+  ],
+  "author": "Oscar Sultanov ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioscars/telegraf-answer/issues"
+  },
+  "homepage": "https://github.com/ioscars/telegraf-answer#readme",
+  "dependencies": {
+    "debug": "^4.3.1"
+  },
+  "peerDependencies": {
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "telegraf": "^3.38.0"
+  }
+}
