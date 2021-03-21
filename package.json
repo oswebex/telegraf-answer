@@ -1,6 +1,6 @@
 {
   "name": "telegraf-answer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Telegraf Answer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
